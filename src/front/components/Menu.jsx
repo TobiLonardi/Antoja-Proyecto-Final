@@ -57,7 +57,7 @@ export const Menu = () => {
     const fetchPizzas = async () => {
         try {
             const backendUrl = import.meta.env.VITE_BACKEND_URL
-            const response = await fetch(`${backendUrl}/pizzas`)
+            const response = await fetch(`${backendUrl}api/pizzas`)
             if (!response.ok) {
                 return Error(`HTTP error! status: ${response.status}`)
             }
@@ -85,7 +85,7 @@ export const Menu = () => {
         const backendUrl = import.meta.env.VITE_BACKEND_URL
 
         try {
-            const response = await fetch(`${backendUrl}/pizzas/${idDeLaPizza}`, {
+            const response = await fetch(`${backendUrl}api/pizzas/${idDeLaPizza}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}`

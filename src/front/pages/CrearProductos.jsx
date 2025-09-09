@@ -55,7 +55,7 @@ export const CrearProductos = () => {
 
         const backendUrl = import.meta.env.VITE_BACKEND_URL
         try {
-            const response = await fetch(`${backendUrl}/pizzas`, {
+            const response = await fetch(`${backendUrl}api/pizzas`, {
                 method: 'POST',
                 headers: { "Authorization": `Bearer ${token}` },
                 body: formData
