@@ -30,7 +30,7 @@ export const Comment = () => {
         const backendUrl = import.meta.env.VITE_BACKEND_URL
 
         try {
-            const response = await fetch(`${backendUrl}/comment`, {
+            const response = await fetch(`${backendUrl}api/comment`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(comment)

@@ -21,7 +21,7 @@ export const UpdateProducts = () => {
     const loadInitialData = async () => {
         const backendUrl = import.meta.env.VITE_BACKEND_URL;
         try {
-            const response = await fetch(`${backendUrl}/pizzas/${pizzaId}`);
+            const response = await fetch(`${backendUrl}api/pizzas/${pizzaId}`);
             if (!response.ok) {
                 return Error("No se encontró el producto.")
             }
@@ -79,7 +79,7 @@ export const UpdateProducts = () => {
 
         const backendUrl = import.meta.env.VITE_BACKEND_URL
         try {
-            const response = await fetch(`${backendUrl}/pizzas/${pizzaId}`, {
+            const response = await fetch(`${backendUrl}api/pizzas/${pizzaId}`, {
                 method: 'PUT',
                 headers: { "Authorization": `Bearer ${token}` },
                 body: formData

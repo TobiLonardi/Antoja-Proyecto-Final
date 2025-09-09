@@ -15,7 +15,7 @@ export const Carrito = () => {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await fetch(`${backendUrl}/orders`, {
+            const response = await fetch(`${backendUrl}api/orders`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
